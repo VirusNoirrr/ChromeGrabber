@@ -13,7 +13,7 @@
 🟢= Work  / 🟡 = Soon
 # Usage : 
 
-`1: Download Discord`
+`1: Download Discord Or Use Browser`
 `2: Create A New Server And Go To A Channel Settings`
 `3: Go To Intergrations And Create A New Webhook`
 `4: Click Copy Webhook Url`
