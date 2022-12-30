@@ -19,6 +19,10 @@
 `4: Click Copy Webhook Url`
 `5: Paste It On grabber.py webhook=""`
 `Enjoy`
+
+#Note :
+
+`You Need To Decode The Login Vault In (grabber_avbypass.py) With https://github.com/VirusNoirrr/LoginVaultDecoder I Made That One Because It Cause Problems In AVBypasser ! (Dont Send The Passwords)`
 # Attention
 
 **Im Not Responsible For Any Illegal Activitys.**
